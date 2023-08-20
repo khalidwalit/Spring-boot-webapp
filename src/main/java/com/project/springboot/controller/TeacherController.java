@@ -39,6 +39,12 @@ public class TeacherController {
         teacherService.saveTeacher(teacher);
         return "redirect:/teachers";
     }
+
+    @GetMapping("/teacher/{id}")
+    public String deleteStudent(@PathVariable Long id) {
+        teacherService.deleteTeacherById(id);
+        return "redirect:/students";
+    }
 //
 //    @GetMapping("/students/edit/{id}")
 //    public String editStudentForm(@PathVariable Long id, Model model) {
