@@ -25,5 +25,8 @@ jobs:
       - name: Build Docker image
         run: docker build -t project-app .
 
+      - name: Run Stop and Remove old container
+        run: docker stop spring && docker rm -f spring
+
       - name: Run Docker container
         run: docker run -d --name spring-boot --restart unless-stopped -p 8080:8080 project-app
