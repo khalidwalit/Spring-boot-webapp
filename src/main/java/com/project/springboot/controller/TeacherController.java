@@ -43,7 +43,7 @@ public class TeacherController {
     @GetMapping("/teacher/{id}")
     public String deleteStudent(@PathVariable Long id) {
         teacherService.deleteTeacherById(id);
-        return "redirect:/students";
+        return "redirect:/teachers";
     }
 //
 //    @GetMapping("/students/edit/{id}")
