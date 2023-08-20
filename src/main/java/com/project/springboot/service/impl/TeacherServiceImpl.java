@@ -27,16 +27,16 @@ public class TeacherServiceImpl implements TeacherService {
     public Teacher saveTeacher(Teacher teacher) {
         return teacherRepository.save(teacher);
     }
-//
-//    @Override
-//    public Teacher getTeacherById(Long id) {
-//        return teacherRepository.findById(id).get();
-//    }
-//
-//    @Override
-//    public Teacher updateTeacher(Teacher teacher) {
-//        return teacherRepository.save(teacher);
-//    }
+
+    @Override
+    public Teacher getTeacherById(Long id) {
+        return teacherRepository.findById(id).get();
+    }
+
+    @Override
+    public Teacher updateTeacher(Teacher teacher) {
+        return teacherRepository.save(teacher);
+    }
 //
     @Override
     public void deleteTeacherById(Long id) {
