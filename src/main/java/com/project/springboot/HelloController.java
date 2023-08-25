@@ -9,7 +9,7 @@ public class HelloController {
     @GetMapping("/")
     public String index() {
         String a = "";
-        return "Lambat  sdke!";
+        return "Sucessfully connected !!!";
     }
 
 }
