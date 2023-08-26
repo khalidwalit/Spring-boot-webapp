@@ -5,7 +5,7 @@
 .idea/
 .vscode/
 
-src/main/resources/.env
+.env
 # Ignore Maven wrapper executable
 .mvn/wrapper/maven-wrapper.jar
 
