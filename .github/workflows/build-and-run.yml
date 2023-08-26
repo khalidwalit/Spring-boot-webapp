@@ -19,12 +19,9 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
-      - name: Create .env file
-        uses: ozaytsev86/create-env-file@v1
-        with:
-          envkey_DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          envkey_DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
-          envkey_DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+      - name: 'Create env file'
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Build Spring Boot JAR
         run: ./mvnw clean package
