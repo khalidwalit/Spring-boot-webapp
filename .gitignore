@@ -9,7 +9,8 @@
 .mvn/wrapper/maven-wrapper.jar
 
 # Ignore application properties files
-src/main/resources/application.properties
+#src/main/resources/application.properties
+/src/main/resources/application.properties
 
 # Ignore log files
 *.log
