@@ -22,13 +22,10 @@ jobs:
       - name: Create .env file
         uses: ozaytsev86/create-env-file@v1
         with:
-          INPUT_ENV_DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          INPUT_ENV_DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
-          INPUT_ENV_DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
-          INPUT_ENV_DEBUG: false
+          envkey_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          envkey_DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+          envkey_DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
           file_name: .env
-          fail_on_empty: false
-          sort_keys: false
 
       - name: Build Spring Boot JAR
         run: ./mvnw clean package
