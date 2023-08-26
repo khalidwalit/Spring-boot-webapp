@@ -35,5 +35,6 @@ jobs:
       - name: Run Docker container
         run: |
           docker run --env-file .env \
-            -d --rm --name spring-boot \
+            -d --name spring-boot \
+            --restart unless-stopped \
             -p 8080:8080 project-app
