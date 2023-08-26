@@ -21,7 +21,7 @@ public class StudentController {
     }
 
     // handler method to handle list students and return mode and view
-    @GetMapping("/students")
+    @GetMapping("/")
     public String listStudents(Model model) {
         model.addAttribute("students", studentService.getAllStudents());
         return "students";
@@ -40,7 +40,7 @@ public class StudentController {
     @PostMapping("/students")
     public String saveStudent(@ModelAttribute("student") Student student) {
         studentService.saveStudent(student);
-        return "redirect:/students";
+        return "redirect:/";
     }
 
     @GetMapping("/students/edit/{id}")
@@ -63,7 +63,7 @@ public class StudentController {
 
         // save updated student object
         studentService.updateStudent(existingStudent);
-        return "redirect:/students";
+        return "redirect:/";
     }
 
     // handler method to handle delete student request
@@ -71,7 +71,7 @@ public class StudentController {
     @GetMapping("/students/{id}")
     public String deleteStudent(@PathVariable Long id) {
         studentService.deleteStudentById(id);
-        return "redirect:/students";
+        return "redirect:/";
     }
 
 }
