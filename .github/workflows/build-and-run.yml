@@ -22,10 +22,10 @@ jobs:
       - name: Make envfiles
         uses: SpicyPizza/create-envfile@v2.0
         with:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
-          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
-          DEBUG: false
+          envkey_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          envkey_DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+          envkey_DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          envkey_DEBUG: false
           file_name: .env
           fail_on_empty: false
           sort_keys: false
