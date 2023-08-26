@@ -21,7 +21,7 @@ jobs:
 
       - name: 'Create env file'
         run: |
-          echo "${{ secrets.ENV_FILE }}" > /.env
+          echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Build Spring Boot JAR
         run: ./mvnw clean package
@@ -33,4 +33,8 @@ jobs:
         run: docker rm -f spring-boot
         
       - name: Run Docker container
-        run: docker run -d --name spring-boot -p 8080:8080 project-app
+        run: docker run -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
+          -e DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }} \
+          -e DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }} \
+          -e DEBUG=${{ secrets.DEBUG }} \
+          -d --name spring-boot -p 8080:8080 project-app
