@@ -3,11 +3,8 @@ package com.project.springboot;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.project.springboot.model.Student;
 import com.project.springboot.repository.StudentRepository;
 
 @SpringBootApplication
