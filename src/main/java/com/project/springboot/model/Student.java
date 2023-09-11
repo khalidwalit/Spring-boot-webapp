@@ -15,6 +15,10 @@ public class Student {
     @Column(name = "email")
     private String email;
 
+    @ManyToOne
+    @JoinColumn(name = "teacher_id") // This column will store the teacher's ID
+    private Teacher teacher; // Reference to the teacher handling this student
+
     public Student() {
 
     }
@@ -56,5 +60,13 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 }

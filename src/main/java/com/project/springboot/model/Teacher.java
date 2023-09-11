@@ -2,6 +2,8 @@ package com.project.springboot.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "teacher")
 public class Teacher {
@@ -15,6 +17,9 @@ public class Teacher {
     private String lastName;
     @Column(name = "email")
     private String email;
+
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
+    private List<Student> students; // Collection of students handled by this teacher
 
     public Teacher() {
 
@@ -57,5 +62,13 @@ public class Teacher {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 }
