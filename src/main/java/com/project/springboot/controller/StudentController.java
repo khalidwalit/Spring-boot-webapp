@@ -21,7 +21,7 @@ public class StudentController {
     }
 
     // handler method to handle list students and return mode and view
-    @GetMapping("/")
+    @GetMapping("/inn")
     public String listStudents(Model model) {
         model.addAttribute("students", studentService.getAllStudents());
         return "students";

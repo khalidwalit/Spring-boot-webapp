@@ -14,6 +14,8 @@ public class Student {
     private String lastName;
     @Column(name = "email")
     private String email;
+    @Transient
+    private String password;
 
     @ManyToOne
     @JoinColumn(name = "teacher_id") // This column will store the teacher's ID
@@ -23,11 +25,12 @@ public class Student {
 
     }
 
-    public Student(String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email, String password) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.password = password;
     }
 
     public Long getId() {
@@ -60,6 +63,14 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Teacher getTeacher() {
