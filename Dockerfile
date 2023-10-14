@@ -1,6 +1,6 @@
 #define base docker image
 
-FROM openjdk:latest
+FROM openjdk:17
 
 LABEL maintainer="khalid.walit"
 
