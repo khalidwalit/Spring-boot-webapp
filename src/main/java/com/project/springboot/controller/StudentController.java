@@ -1,5 +1,9 @@
 package com.project.springboot.controller;
 
+import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +27,14 @@ public class StudentController {
     // handler method to handle list students and return mode and view
     @GetMapping("/students")
     public String listStudents(Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (!(auth instanceof AnonymousAuthenticationToken)) {
+            String currentUserName = auth.getName();
+            System.out.println("waknat lu"+auth.getAuthorities());
+//            return currentUserName;
+        }
         model.addAttribute("students", studentService.getAllStudents());
+        model.addAttribute("auth", auth);
         return "students";
     }
 

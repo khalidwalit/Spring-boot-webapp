@@ -41,7 +41,9 @@ public class UserServiceImpl implements UserService {
         Role role = roleRepository.findByName("ROLE_ADMIN");
         if(role == null){
             role = checkRoleExist();
+            System.out.println(role);
         }
+        System.out.println(Arrays.asList(role));
         user.setRoles(Arrays.asList(role));
         userRepository.save(user);
     }
