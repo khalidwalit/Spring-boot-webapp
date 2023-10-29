@@ -28,12 +28,10 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Student student = studentRepository.findByEmail(username);
 
-        System.out.println(student);
 
         if (student != null) {
             Collection<? extends GrantedAuthority> authorities = mapRolesToAuthorities(student.getRoleName());
 
-            System.out.println(authorities);
             return new User(
                     student.getEmail(),
                     student.getPassword(),
