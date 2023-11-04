@@ -1,5 +1,6 @@
 package com.project.springboot.controller;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +15,12 @@ import com.project.springboot.service.StudentService;
 public class StudentController {
 
     private StudentService studentService;
+    private PasswordEncoder passwordEncoder;
 
-    public StudentController(StudentService studentService) {
+    public StudentController(StudentService studentService, PasswordEncoder passwordEncoder) {
         super();
         this.studentService = studentService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     // handler method to handle list students and return mode and view
@@ -39,6 +42,17 @@ public class StudentController {
 
     @PostMapping("/students")
     public String saveStudent(@ModelAttribute("student") Student student) {
+//        System.out.println(student.getEmail());
+//        student.setPassword("password");
+//        student.setRoleName("STUDENT");
+
+        Student existingUser = studentService.findStudentByEmail(student.getEmail());
+        if ( existingUser != null && existingUser.getEmail() != null && !existingUser.getEmail().isEmpty()){
+            return "redirect:/students/new";
+        }
+
+        student.setPassword(passwordEncoder.encode(student.getPassword()));
+        System.out.println(student.getPassword());
         studentService.saveStudent(student);
         return "redirect:/";
     }
