@@ -1,10 +1,389 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Amesotw </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-HOMEPAGE
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <img th:src="@{/images/moonyellow-01.png}" />
+    <div class="container"> <a class="navbar-brand navbar-logo" href="index2.html">  <img th:src="@{/img/moonyellow-01.png}"     width="100" height="100" alt="logo" class="logo-1">
+    </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> <a class="nav-link" th:href = "@{/index2}">What is Anxiety?</a> </li>
+                <li class="nav-item"> <a class="index.html" th:href = "@{/anxietytypes}" style = "text-decoration: none;">Types of Anxiety</a> </li>
+                <li class="nav-item"> <a class="nav-link" th:href = "@{/treatment}">Treatment and Medication</a> </li>
+                <li class="nav-item"> <a class="nav-link" th:href = "@{/assessment}" >Anxiety Assessment</a> </li>
+                <li class="nav-item">
+
+                    <div class="dropdown" >
+                        Log In
+                        <div class="dropdown-content">
+                            <a th:href = "@{/LoginStudent}" style = "font-color: black;  ">Student</a>
+                            <a th:href = "@{/LoginCounsellor}">Counsellor</a>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+<!-------Banner Start------->
+<section class="banner" data-scroll-index='0'>
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <div class="banner-text">
+                        <h1 style="font-size: 50px; font-family:'Atlane';">Anxiety</h1>
+                        <p style="font-size: 17px;" class="banner-text white">Anxiety is a feeling of unease, such as worry or fear, that can be mild or severe. Everyone has feelings of anxiety at some point in their life. For example, you may feel worried and anxious about sitting an exam, or having a medical test or job interview.</p>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12"> <img src="images/womananxiety.png" class="img-fluid wow fadeInUp"/> </div>
+            </div>
+        </div>
+    </div> </section>
+
+<!-------Banner End------->
+
+<!-------About End------->
+
+<section class="section-padding prelative">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sectioner-header text-center">
+                    <h3>What is Anxiety?</h3>
+                    <span class="line"></span>
+                    <p>Anxiety is a feeling of fear, dread, and uneasiness. It might cause you to sweat, feel restless and tense,
+                        and have a rapid heartbeat. It can be a normal reaction to stress. For example, you might feel anxious when
+                        faced with a difficult problem at work, before taking a test, or before making an important decision.
+                        It can help you to cope. The anxiety may give you a boost of energy or help you focus. But for people
+                        with anxiety disorders, the fear is not temporary and can be overwhelming.</p>
+                </div>
+                <div class="section-content text-center">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa fa-sad-cry" aria-hidden="true"></i>
+                                <h5>Support</h5>
+                                <p>Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae condimentum nulla.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-sad-tear" aria-hidden="true"></i>
+                                <h5>Cross Platform</h5>
+                                <p>Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae condimentum nulla.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-angry" aria-hidden="true"></i>
+                                <h5>Fast</h5>
+                                <p>Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae condimentum nulla.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="about-btn">Learn More</a> </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------About End------->
+
+<!-------Video Start------->
+<section class="video-section prelative text-center white">
+    <div class="section-padding video-overlay">
+        <div class="container">
+            <h3>Watch Now</h3>
+            <i class="fa fa-play" id="video-icon" aria-hidden="true"></i>
+            <div class="video-popup">
+                <div class="video-src">
+                    <div class="iframe-src">
+                        <iframe src="https://www.youtube.com/embed/JOKS9Bx8-Sw?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------Video End------->
+
+<!-------Features Start------->
+<section class="feature section-padding" data-scroll-index='2'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="sectioner-header text-center">
+                    <h3>How can anxiety affects us?</h3>
+                    <span class="line"></span>
+                    <p>Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.</p>
+                </div>
+
+                <div class="section-content text-center">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="media-body text-right media-right-margin">
+
+                                    <h5>Body</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore</p>
+                                </div>
+                                <div class="icon-border"> <span class="fa fa-bolt" aria-hidden="true"></span> </div>
+                            </div>
+                            <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="media-body text-right media-right-margin">
+
+                                    <h5>Mind</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore</p>
+                                </div>
+                                <div class="media-right icon-border"> <span class="fa fa-battery-full" aria-hidden="true"></span> </div>
+                            </div>
+                            <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 d-none d-md-block d-lg-block">
+                            <div class="feature-mobile"> <img src="images/anxiety-disorder-illustration-png.webp" class="img-fluid wow fadeInUp"/> </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="media-left icon-border media-right-margin"> <span class="fa fa-check-double" aria-hidden="true"></span> </div>
+                                <div class="media-body text-left">
+
+                                    <h5>Regular Updates</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore</p>
+                                </div>
+                            </div>
+                            <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="media-left icon-border media-right-margin"> <span class="fa fa-dollar-sign" aria-hidden="true"></span> </div>
+                                <div class="media-body text-left">
+
+                                    <h5>Save Money</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------Features End------->
+
+<!-------Team Start------->
+<section class="team section-padding" data-scroll-index='3'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sectioner-header text-center">
+                    <h3>The Counsellors of UiTM Jasin</h3>
+                    <span class="line"></span>
+                    <p>-</p>
+                </div>
+                <div class="section-content text-center center">
+
+                    <div class="row">
+                        <div class = "col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="team-detail wow bounce" data-wow-delay="0.2s"> <img src="images/syahirah.jpg" class="img-fluid"/>
+                                <h4>Nur Shahira Md Shukor K.B, P.A</h4>
+                                <p>Senior Psychology Officer (Jasin)</p>
+                            </div>
+                        </div>
+                        <div class = "col-md-1"></div>
+                        <div class="col-md-5">
+                            <div class="team-detail wow bounce" data-wow-delay="0.4s"> <img src="images/noor-aiennatul-mardhiyah.png" class="img-fluid"/>
+                                <h4>Noor Aiennatul Mardhiyah Abdul Wahab K.B, P.A</h4>
+                                <p>Senior Psychology Officer (Jasin)</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-------Team End------->
+
+
+
+<!-------FAQ Start------->
+<section class="testimonial section-padding prelative" data-scroll-index='5'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sectioner-header text-center">
+                    <h3>Frequently Asked Questions</h3>
+                    <span class="line"></span>
+
+                </div>
+                <div class="section-content">
+                    <div class="row" >
+                        <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>What are the five most common types of anxiety disorders?</h4>
+                            <div style = "color: white;">
+                                <p style = "color: white;">- Generalized Anxiety Disorder</p>
+                                <p style = "color: white;">- Obsessive-Compulsive Disorder (OCD)</p>
+                                <p style = "color: white;">- Panic Disorder</p>
+                                <p style = "color: white;">- Post-Traumatic Stress Disorder (PTSD)</p>
+                                <p style = "color: white;">- Social Phobia (or Social Anxiety Disorder)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>How are anxiety disorders diagnosed?</h4>
+                            <p style = "color: white;">Primary care physicians and psychiatrists diagnose someone as having an anxiety disorder if symptoms occur for six months on more days than not, and significantly interfere with the person’s ability to function at home, work or school.</p>
+
+                            <p style = "color: white;"> Doctors perform physical and psychological evaluations to rule out other causes for the symptoms of anxiety. Cardiovascular disease, thyroid problems, menopause, substance abuse and/or drug side effects, such as from steroids, may cause symptoms similar to those of an anxiety disorder</p>
+                        </div>
+                        <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
+                            <h4>What are the risk factors for anxiety disorders?</h4>
+                            <p style = "color: white;">Researchers are finding that genetic and environmental factors are risk factors for anxiety disorders. Specific factors include:</p>
+
+                            <p style = "color: white;">- Shyness, or behavioral inhibition, in childhood</p>
+                            <p style = "color: white;">- Being female</p>
+                            <p style = "color: white;">- Having few economic resources</p>
+                            <p style = "color: white;">- Being divorced or widowed</p>
+                            <p style = "color: white;">- Exposure to stressful life events in childhood and adulthood</p>
+                            <p style = "color: white;">- Anxiety disorders in close biological relatives</p>
+                            <p style = "color: white;">- Parental history of mental disorders</p>
+                            <p style = "color: white;">- Elevated afternoon cortisol levels in the saliva (specifically for social anxiety disorder)</p>
+                        </div>
+
+                        <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
+                            <h4> What are common anxiety disorder treatments?</h4>
+                            <p style = "color: white;">Anxiety disorders are generally treated with psychotherapy, medication, or both.</p>
+
+                            <p style = "color: white;">- Psychotherapy</p>
+                            <p style = "color: white;">- Cognitive Behavioral Therapy (CBT)</p>
+                            <p style = "color: white;">- Self-Help or Support Groups</p>
+                            <p style = "color: white;">- Stress-Management Techniques</p>
+                            <p style = "color: white;">- Antidepressants</p>
+                            <p style = "color: white;">- Anti-Anxiety Medications</p>
+                            <p style = "color: white;">- Beta-Blockers</p>
+                        </div>
+
+                        <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
+                            <h4>What is the best way to treat children with anxiety disorders?</h4>
+                            <p style = "color: white;">There are generally two types of treatments that seem to be equally effective: cognitive behavioral therapy (CBT) and selective serotonin reuptake inhibitor
+                                (SSRI) medications. The best study that compared them directly in kids found one is no better than the other, and that combining the two works better than
+                                using one or the other alone. Cognitive behavioral therapy is a really wonderful treatment, but the therapist has to have some experience delivering it.
+                                Specific techniques need to be followed. There are not that many therapists in the United States who are readily available to apply those methods.</p>
+                        </div>
+
+                        <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
+                            <h4>What is generalized anxiety disorder?</h4>
+                            <p style = "color: white;">Generalized Anxiety Disorder (GAD) is an exaggerated anxiety and tension that persists for months on end and affects approximately 6.8 million
+                                Americans or about 3.1 percent of the population. GAD causes people to anticipate catastrophe and worry excessively about many things,
+                                from overarching concerns such as health, money or work to more routine concerns such as car repairs or appointments. GAD affects twice
+                                as many women as men, and the anxiety becomes so severe, normal life and relationships become impaired.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-------FAQ End------->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<!-- scrollIt js -->
+<script src="js/scrollIt.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+  wow = new WOW();
+  wow.init();
+$(document).ready(function(e) {
+
+  $('#video-icon').on('click',function(e){
+  e.preventDefault();
+  $('.video-popup').css('display','flex');
+  $('.iframe-src').slideDown();
+  });
+  $('.video-popup').on('click',function(e){
+  var $target = e.target.nodeName;
+  var video_src = $(this).find('iframe').attr('src');
+  if($target != 'IFRAME'){
+  $('.video-popup').fadeOut();
+  $('.iframe-src').slideUp();
+  $('.video-popup iframe').attr('src'," ");
+  $('.video-popup iframe').attr('src',video_src);
+  }
+  });
+
+  $('.slider').bxSlider({
+  pager: false
+  });
+});
+
+$(window).on("scroll",function () {
+
+  var bodyScroll = $(window).scrollTop(),
+  navbar = $(".navbar");
+
+  if(bodyScroll > 50){
+  $('.navbar-logo img').attr('src','images/moon.png');
+  navbar.addClass("nav-scroll");
+
+}else{
+  $('.navbar-logo img').attr('src','images/moonyellow-01.png');
+  navbar.removeClass("nav-scroll");
+}
+
+});
+$(window).on("load",function (){
+  var bodyScroll = $(window).scrollTop(),
+  navbar = $(".navbar");
+
+  if(bodyScroll > 50){
+  $('.navbar-logo img').attr('src','images/moon.png');
+  navbar.addClass("nav-scroll");
+  }else{
+  $('.navbar-logo img').attr('src','images/moonyellow-01.png');
+  navbar.removeClass("nav-scroll");
+  }
+
+  $.scrollIt({
+
+  easing: 'swing',      // the easing function for animation
+  scrollTime: 900,       // how long (in ms) the animation takes
+  activeClass: 'active', // class given to the active nav element
+  onPageChange: null,    // function(pageIndex) that is called when page is changed
+  topOffset: -63
+  });
+});
+
+</script>
 </body>
 </html>

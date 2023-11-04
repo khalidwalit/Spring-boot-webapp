@@ -29,6 +29,8 @@ public class SpringSecurity {
         http.csrf().disable()
                 .authorizeHttpRequests((authorized) ->
                         authorized
+                                .requestMatchers("/static/**").permitAll()
+                                .requestMatchers("/img/**").permitAll()
                                 .requestMatchers("/login").permitAll()
                                 .requestMatchers("/index").permitAll()
                                 .requestMatchers("/register").permitAll()
@@ -47,7 +49,7 @@ public class SpringSecurity {
                                         response.sendRedirect("/teachers");
                                     } else if (authentication != null && authentication.getAuthorities().stream()
                                             .anyMatch(a -> a.getAuthority().equals("ROLE_STUDENT"))) {
-                                        response.sendRedirect("/other");
+                                        response.sendRedirect("/students");
                                     } else {
                                         response.sendRedirect("/students");
                                     }
@@ -63,6 +65,8 @@ public class SpringSecurity {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+
+        System.out.println(userDetailsService);
         auth
                 .userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());

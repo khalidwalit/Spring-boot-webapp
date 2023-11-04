@@ -33,7 +33,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (student != null) {
             Collection<? extends GrantedAuthority> authorities = mapRolesToAuthorities(student.getRoleName());
 
-            System.out.println(authorities);
+            System.out.println(student.getPassword());
             return new User(
                     student.getEmail(),
                     student.getPassword(),
