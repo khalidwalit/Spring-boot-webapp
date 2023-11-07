@@ -44,6 +44,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Tag a Release
+        if: steps.check-approval.outputs.data != null
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "<>"
+          git tag -a v1.0 -m "Release v1.0"
+          git push origin --tags
+
       - name: Deploy to Production
         if: steps.check-approval.outputs.data != null
         run: npx serverless deploy --stage production
