@@ -22,16 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Request approval
-        id: approval
-        uses: softprops/action-gh-release@v1
-        with:
-          name: 'Deployment approval'
-          body: |
-            **Deployment Request**
-
-            The deployment to production requires your approval. Please review the changes and approve or reject the deployment.
-
       - name: Check approval status
         id: check-approval
         uses: octokit/request-action@v2.x
